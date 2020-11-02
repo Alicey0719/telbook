@@ -1,4 +1,4 @@
-class FriendController < ApplicationController
+class FriendsController < ApplicationController
   def show
     @friend = Friend.find(params[:id])
     @telephones = Telephone.where(friend:@friend)
@@ -10,7 +10,6 @@ class FriendController < ApplicationController
 
   def new
     @friend = Friend.new(name:"name")
-    @f = Friend.find(1)
   end
 
   def create

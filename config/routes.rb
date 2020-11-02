@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
 
   resources :top
-  resources :friend do
+  resources :friends do
   end
 
 
