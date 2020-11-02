@@ -14,6 +14,15 @@ class FriendController < ApplicationController
   def create
   end
 
+  def update
+    @friend = Friend.find(params[:id])
+    @friend.assign_attributes(params[:friend])
+    if @friend.save
+      redirect_to @friend, notice: "更新しました"
+    else
+      render "edit"
+    end
+  end
 
   def destroy
     @friend = Friend.find(params[:id])
