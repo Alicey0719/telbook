@@ -1,2 +1,11 @@
-<h1>Friend#edit</h1>
-<p>Find me in app/views/friend/edit.html.erb</p>
+<h1>TelbookApplication</h1>
+<h2>EditFriend</h2>
+
+<%= form_for @friend do |form|  %>
+  <%= render "form", form: form %>
+  <div><%= form.submit %></div>
+<% end %>
+
+
+
+<%= render "footer"  %>
