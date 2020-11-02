@@ -7,8 +7,8 @@ Rails.application.routes.draw do
 
   resources :top
   resources :friends do
+    resources :telephones
   end
-
-
+  resources :telephones
 
 end

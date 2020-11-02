@@ -5,7 +5,7 @@
   <ul>
     <% @telephones.each do |tel| %>
       <div class="data">  
-        <li><%= tel.number %> <%= p "📱" if tel.cellphone %> <%= link_to "delete", "#" %></li>
+        <li><%= tel.number %> <%= p "📱" if tel.cellphone %> <%= link_to "delete", tel, method: :delete %></li>
       </div>
     <% end %>
   </ul>
