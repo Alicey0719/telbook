@@ -1,7 +1,7 @@
 <h1>TelbookApplication</h1>
 <h2>NewFriend</h2>
 
-<%= form_for @friend do |form|  %>
+<%= form_for @friend  do |form|  %>
   <%= render "form", form: form %>
   <div><%= form.submit %></div>
 <% end %>

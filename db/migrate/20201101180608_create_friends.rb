@@ -4,7 +4,7 @@ class CreateFriends < ActiveRecord::Migration[5.2]
       
       t.string :name, null: false
 
-      t.timestamps
+      #t.timestamps
     end
   end
 end

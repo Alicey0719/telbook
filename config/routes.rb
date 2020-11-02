@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   root "top#index"
   get "top/index"
 
+
   resources :top
-  resources :friend
+  resources :friend do
+  end
+
 
 
 end

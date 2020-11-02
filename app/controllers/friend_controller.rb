@@ -9,9 +9,17 @@ class FriendController < ApplicationController
   end
 
   def new
+    @friend = Friend.new(name:"name")
+    @f = Friend.find(1)
   end
 
   def create
+    @friend = Friend.new(params[:friend])
+    if @friend.save
+      redirect_to @friend, notice: "登録しました"
+    else
+      render "new"
+    end
   end
 
   def update
