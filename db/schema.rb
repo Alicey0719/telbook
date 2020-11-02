@@ -19,10 +19,12 @@ ActiveRecord::Schema.define(version: 2020_11_02_072558) do
   end
 
   create_table "telephones", force: :cascade do |t|
+    t.integer "friend_id", null: false
     t.string "number", null: false
     t.boolean "cellphone", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["friend_id"], name: "index_telephones_on_friend_id"
   end
 
 end

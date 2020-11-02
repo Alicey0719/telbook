@@ -1,0 +1,17 @@
+<h1>TelBookApplication</h1>
+<h2><%= @friend.name %></h2>
+
+<% if @telephones.present? %>
+  <ul>
+    <% @telephones.each do |tel| %>
+      <div class="data">  
+        <li><%= tel.number %></li>
+        <p>aa</p>
+      </div>
+    <% end %>
+  </ul>
+<% else %>
+  <p>データがありません。</p>
+<% end %>
+
+<%= render "footer" %>
