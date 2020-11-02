@@ -1,1 +1,24 @@
-<h1>TelbookApplication</h1>
+<h1>Telbook</h1>
+
+<% if @friends.present? %>
+  <table class="list">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>氏名</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @friends.each do |friend| %>
+        <tr>
+          <td style="text-align: right"><%= friend.id %></td>
+          <td><%= friend.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>データがありません。</p>
+<% end %>
+
+
