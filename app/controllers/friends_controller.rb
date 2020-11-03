@@ -2,6 +2,7 @@ class FriendsController < ApplicationController
   def show
     @friend = Friend.find(params[:id])
     @telephones = Telephone.where(friend:@friend)
+    @newTel = Telephone.new(cellphone:false)
   end
 
   def edit
@@ -15,7 +16,7 @@ class FriendsController < ApplicationController
   def create
     @friend = Friend.new(params[:friend])
     if @friend.save
-      redirect_to @friend, notice: "登録しました"
+      redirect_to root_path, notice: "登録しました"
     else
       render "new"
     end
@@ -25,7 +26,7 @@ class FriendsController < ApplicationController
     @friend = Friend.find(params[:id])
     @friend.assign_attributes(params[:friend])
     if @friend.save
-      redirect_to @friend, notice: "更新しました"
+      redirect_to root_path, notice: "更新しました"
     else
       render "edit"
     end
@@ -35,6 +36,7 @@ class FriendsController < ApplicationController
     @friend = Friend.find(params[:id])
     @friend.destroy
     redirect_to root_path, notice:"削除しました"
+
   end
 
 end

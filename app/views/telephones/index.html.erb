@@ -1,14 +1,14 @@
 <h1>TelBookApplication</h1>
 <h2><%= @friend.name %></h2>
 
-<% if @friend.telephones.present? %>
+<% if @telephones.present? %>
   <ul>
-    <% @friend.telephones.each do |tel| %>
+    <% @telephones.each do |tel| %>
       <div class="data">  
         <li>
           <%= tel.number %> 
           <%= p "📱" if tel.cellphone %> 
-          <%= link_to "delete", tel, method: :delete, data: {confirm:"本当に削除しても良い？"}  %>
+          <%= link_to "delete", [@friend,tel], method: :delete , data: {confirm:"本当に削除しても良い？"} %>
         </li>
       </div>
     <% end %>
@@ -17,7 +17,7 @@
   <p>データがありません。</p>
 <% end %>
 
-<%= form_for @friend.newTel do |newTel| %>
+<%= form_for [@friend,@newTel] do |newTel| %>
   <%= render "telephones/form", form: newTel %>
 <% end %>
 

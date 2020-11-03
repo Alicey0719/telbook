@@ -14,7 +14,7 @@
       <% @friends.each do |friend| %>
         <tr>
           <td style="text-align: right"><%= friend.id %></td>
-          <td><%= link_to friend.name, friend  %></td>
+          <td><%= link_to friend.name, [friend,:telephones]  %></td>
           <td>
             <%= link_to "edit",[:edit, friend] %> |
             <%= link_to "delete", friend, method: :delete, data: {confirm:"本当に削除しても良い？"} %>
