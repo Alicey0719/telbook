@@ -1,6 +1,7 @@
 class TopController < ApplicationController
   def index
-    @friends = Friend.all
+    @friends = Friend.order("id").page(params[:page]).per(3)
+
   end
 
   def show

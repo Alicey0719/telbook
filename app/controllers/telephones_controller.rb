@@ -3,6 +3,7 @@ class TelephonesController < ApplicationController
 def index
     @friend = Friend.find(params[:friend_id])
     @telephones = Telephone.where(friend:@friend)
+      .page(params[:page]).per(3)
     @newTel = Telephone.new(cellphone:false)
 end
 
