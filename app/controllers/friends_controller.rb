@@ -10,7 +10,7 @@ class FriendsController < ApplicationController
   end
 
   def new
-    @friend = Friend.new(name:"name")
+    @friend = Friend.new()
   end
 
   def create

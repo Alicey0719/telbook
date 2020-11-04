@@ -1,10 +1,10 @@
 class TelephonesController < ApplicationController
 
-def index
-    @friend = Friend.find(params[:friend_id])
-    @telephones = Telephone.where(friend:@friend)
-    @newTel = Telephone.new(cellphone:false)
-end
+  def index
+      @friend = Friend.find(params[:friend_id])
+      @telephones = Telephone.where(friend:@friend)
+      @newTel = Telephone.new(cellphone:false)
+  end
 
   def destroy
     @telephone = Telephone.find(params[:id])

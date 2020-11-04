@@ -13,3 +13,97 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: aliceblue;
+}
+
+h1 {
+  padding: 1rem 2rem;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+}
+
+h2 {
+  padding: 1rem 2rem;
+  border-left: 4px solid #000;
+}
+
+table {
+  padding: 0;
+  width: 400px;
+  box-shadow: 0 0 15px -6px #00000073;
+}
+
+table tr {
+  background-color: #fff;
+}
+
+table th,
+table td {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+table th {
+  width: 20%;
+  padding: 10px 0;
+  font-size: 14px;
+  padding: 15px;
+  background-color: #6bb7ff;
+  color: #fff;
+}
+
+table tr {
+  text-align: center;
+  width: 20%;
+  padding: 20px 0;
+  background-color: #fff;
+  color: #3a3a3a;
+}
+
+table tr:hover {
+  background-color: #d4faff;
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+a::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #31aae2;
+  transition: 0.3s;
+  transform: translateX(-50%);
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+ul,
+ol {
+  color: #668ad8; /*文字色*/
+  border: dashed 2px #668ad8; /*破線 太さ 色*/
+  background: #f1f8ff; /*背景色*/
+  padding: 0.5em 0.5em 0.5em 2em;
+}
+
+ul li,
+ol li {
+  line-height: 1.5;
+  padding: 0.5em 0;
+}
+
+.add {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: coral;
+}

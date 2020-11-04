@@ -1,7 +1,7 @@
 <h1>TelbookApplication</h1>
 
 <% if @friends.present? %>
-  <%= link_to "add", :new_friend %>
+  <%= link_to "add", :new_friend, {class: "add"}%>
   <table class="list">
     <thead>
       <tr>
